@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../img/valentin2.jpg");
+    color: azure;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+}
+
+.content-wrapper {
+    text-align: center;
+    z-index: 1;
+}
+.greetings {
+    font-size: 6rem;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.greetings > span {
+    display: inline-block;
+    animation: glow 2.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        color: #ff70a6;
+        text-shadow: 0 0 12px #ff70a6, 0 0 50px #f78acb, 0 0 100px #f94144;
+    }
+    10%, 90% {
+        color: #fff;
+        text-shadow: none;
+    }
+}
+
+.greetings > span:nth-child(1) { animation-delay: 0.12s; } 
+.greetings > span:nth-child(1) { animation-delay: 0.12s; } 
+.greetings > span:nth-child(2) { animation-delay: 0.3s; }
+.greetings > span:nth-child(3) { animation-delay: 0.5s; }
+.greetings > span:nth-child(4) { animation-delay: 0.7s; }
+.greetings > span:nth-child(5) { animation-delay: 0.9s; }
+.greetings > span:nth-child(6) { animation-delay: 1.1s; }
+.greetings > span:nth-child(7) { animation-delay: 1.3s; }
+.greetings > span:nth-child(8) { animation-delay: 1.5s; }
+
+
+
+.description {
+    font-size: 2rem;
+    color: #ff6f91;
+    margin-top: 20px;
+}
+
+.botones {
+    padding: 12px 30px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff70a6, #ff6f91);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.botones:hover {
+    background: linear-gradient(135deg, #ff6f91, #ff70a6);
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+.botones a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+.random-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.random-images div {
+    position: absolute;
+    animation: float 8s infinite ease-in-out;
+}
+
+.random-images img {
+    width: 150px;
+    height: auto;
+    border-radius: 15px;
+   
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+
+.random-images img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 192, 203, 0.5); /* Sombra rosada suave al hacer hover */
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20px, -30px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.random-images div:nth-child(1) { top: 10%; left: 5%; }
+.random-images div:nth-child(2) { top: 20%; right: 10%; }
+.random-images div:nth-child(3) { bottom: 15%; left: 30%; }
+.random-images div:nth-child(4) { bottom: 5%; right: 20%; }
